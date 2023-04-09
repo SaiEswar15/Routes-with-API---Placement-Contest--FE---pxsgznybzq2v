@@ -1,3 +1,4 @@
+
 import React from 'react'
 import '../styles/App.css';
 import Navbar from './Navbar';
@@ -11,7 +12,13 @@ const App = () => {
   return (
     <div id="main">
       <Navbar />
-      <div className='container'></div>
+      <div className='container'>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/top-10" element={<Top />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
     </div>
   )
 }
